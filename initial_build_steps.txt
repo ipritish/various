@@ -1,0 +1,4 @@
+compile header : gcc -I ./includes -c hfcal.c -o hfcal.o
+complie main: gcc -I./includes -c elliptical.c -o elliptcal.o
+create archive lib: ar -rcs ./libs/libhfcal.a hfcal.o
+create executable via lining lib and code:gcc elliptical.o -L./libs -lhfcal -o elliptical
